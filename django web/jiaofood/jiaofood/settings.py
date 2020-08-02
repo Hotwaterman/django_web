@@ -25,7 +25,7 @@ SECRET_KEY = 'kytv59v_*_gw(h65)rufy%q9hhn$milq4k_ira$6)0v#i8cun9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.jiaofood.xyz', 'localhost', '127.0.0.1','133.242.48.171']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'jiaofood.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_mysql',
-        'USER': 'root',
-        'PASSWORD': 'Sd824658571,',
-        'HOST': '133.242.48.171',
+        'NAME': '你的数据库名称',
+        'USER': '用户名',
+        'PASSWORD': '密码',
+        'HOST': '',
         'POST': 3306,
     }
 }
