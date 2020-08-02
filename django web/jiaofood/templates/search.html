@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  {% if error_msg %}
+    <p>{{ error_msg }}</p>
+  {% endif %}
+
+  {% for food in food_list %}
+      <div id="name">
+          <h1>{{ food.name }}</h1>
+      </div>
+      <div id="FoodGroup">
+          <h3>FoodGroup:</h3>
+              <li>{{food.FoodGroup}}</li> 
+      </div>
+      <div id="Calories">
+        <h3>Calories:</h3>
+            <li>{{food.Calories}}</li> 
+      </div>
+      <div id="Protein">
+        <h3>Protein:</h3>
+            <li>{{food.Protein}}</li> 
+      </div>
+      <div id="Carbohydrate">
+        <h3>Carbohydrate:</h3>
+            <li>{{food.Carbohydrate}}</li> 
+      </div>
+      <div id="Sugars">
+        <h3>Sugars:</h3>
+            <li>{{food.Sugars}}</li> 
+      </div>
+      <div id="Fiber">
+        <h3>Fiber:</h3>
+            <li>{{food.Fiber}}</li> 
+      </div>
+  {% empty %}
+    <div class="no-post">not include yet</div>
+  {% endfor %}
+{% endblock %}

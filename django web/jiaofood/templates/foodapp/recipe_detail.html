@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<div id="title">
+		<h1>{{ recipe.title }}</h1>
+	</div>
+	<div id="ingredients">
+		<h4>Ingredients</h4>
+			<ul>
+				{% for ingredient in recipe.ingredients.all %}
+					<li>{{ingredient.quantity}} {{ingredient.units}}  {{ingredient.name}}</li>
+				{% endfor %}
+			</ul>
+	</div>
+	<div id="recipe-steps">
+		<h4>Instructions</h4>
+			<ol>
+				{% for step in recipe.steps.all %}
+					<li>{{step.description}}</li>
+				{% endfor %}
+			</ol>
+	</div>
+{% endblock %}

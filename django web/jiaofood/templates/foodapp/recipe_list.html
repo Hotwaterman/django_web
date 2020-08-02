@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h2>Recipe List</h2>
+	{% for recipe in object_list %}
+		<div class="recipeitem">
+			<div class="title">
+			    <a href="/recipe/{{recipe.id}}/{{recipe.title|slugify}}">{{recipe.title}}</a>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}

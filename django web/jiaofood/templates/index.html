@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eat &amp; Healthy!</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        span.highlighted {
+            color: red;
+        }
+    </style>
+
+   
+</head>
+
+<body style="text-align:center">
+    {% block menu %}
+	<div id="menu">
+		<h1>Recipes</h1>
+		<ul> 
+			<li id="all-recipes"> <a href="/all">All Recipes</a> </li>
+		    <li id="add-recipe"> <a href="/add">Share Recipe</a> </li> 
+	</div>
+	{% endblock  %}
+	<div id="content">
+		{% block content %}
+		{% endblock  %}
+	</div>
+	<div id="footer">
+        {% block footer %}
+        
+        <h1><a><b>Food</b> &amp; Eat healthy</a></h1>
+           
+        <button type="button" id="trigger-overlay" class="navbar-toggle">
+            <span class="ion-navicon"></span>
+        </button>
+ 
+        <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong">search:</span></a>
+        <div id="search-form" class="search-form">
+            <form role="search" method="get" id="searchform" action="{% url 'search' %}">
+                please input the food name: <input type="search" name="q" placeholder="Search" required>
+                <button type="submit", value="get it!"><span class="ion-ios-search-strong"></span></button>
+            </form>
+        </div>
+
+		{% endblock  %}
+	</div>
+    
+
+</body>
+</html>
